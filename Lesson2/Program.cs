@@ -63,7 +63,6 @@ namespace Lesson2
                 bool isBatman = IsBatman(personHeightcm);
                 bool isBatmanOpened = IsBatmanOpened(dayOfWeekEnum);
 
-                //if (dayOfWeekEnum == Day.Monday || dayOfWeekEnum == Day.Wednesday || dayOfWeekEnum == Day.Friday)
                 if (personGender == "Male" && isBatman && isBatmanOpened)
                 {
                     Console.WriteLine("child {0} is able to attend Batman", personName);
@@ -72,3 +71,4 @@ namespace Lesson2
             }
         }
 }
+//if (dayOfWeekEnum == Day.Monday || dayOfWeekEnum == Day.Wednesday || dayOfWeekEnum == Day.Friday)
