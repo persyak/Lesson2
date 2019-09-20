@@ -1,0 +1,7 @@
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\bin\Debug\Lesson2.exe.config
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\bin\Debug\Lesson2.exe
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\bin\Debug\Lesson2.pdb
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\obj\Debug\Lesson2.csprojAssemblyReference.cache
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\obj\Debug\Lesson2.csproj.CoreCompileInputs.cache
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\obj\Debug\Lesson2.exe
+C:\Users\dev_ogorodna\source\StudyRepo\lesson2\Lesson2\obj\Debug\Lesson2.pdb

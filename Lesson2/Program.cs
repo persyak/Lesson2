@@ -38,9 +38,9 @@ namespace Lesson2
             int personHeightcm = 0;
             Int32.TryParse(personHeight, out personHeightcm);
 
-            bool IsBatman(int h)
+            bool IsBatmanOpened(Day day)
             {
-                if (h > 150)
+                if (day == Day.Monday || day == Day.Wednesday || day == Day.Friday)
                 {
                     return true;
                 }
@@ -49,17 +49,26 @@ namespace Lesson2
                     return false;
                 }
             }
+                bool IsBatman(int h)
+                {
+                    if (h > 150)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                bool isBatman = IsBatman(personHeightcm);
+                bool isBatmanOpened = IsBatmanOpened(dayOfWeekEnum);
 
-            bool isBatman = IsBatman(personHeightcm);
-
-            if (dayOfWeekEnum == Day.Monday || dayOfWeekEnum == Day.Wednesday || dayOfWeekEnum == Day.Friday)
-            {
-                if (personGender == "Male" && isBatman)
+                //if (dayOfWeekEnum == Day.Monday || dayOfWeekEnum == Day.Wednesday || dayOfWeekEnum == Day.Friday)
+                if (personGender == "Male" && isBatman && isBatmanOpened)
                 {
                     Console.WriteLine("child {0} is able to attend Batman", personName);
                     Console.ReadLine();
                 }
             }
         }
-    }
 }
