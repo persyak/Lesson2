@@ -38,6 +38,8 @@ namespace Lesson2
             int personHeightcm = 0;
             Int32.TryParse(personHeight, out personHeightcm);
 
+            Kid tom = new Kid(personName, personHeightcm, 1);
+
             bool IsBatmanOpened(Day day)
             {
                 if (day == Day.Monday || day == Day.Wednesday || day == Day.Friday)
