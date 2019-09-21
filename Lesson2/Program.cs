@@ -21,6 +21,9 @@ namespace Lesson2
         }
         static void Main(string[] args)
         {
+            Day dayOfWeekEnum;
+            int personHeightcm = 0;
+
             Console.WriteLine("What's your name?");
             string personName = Console.ReadLine();
 
@@ -32,10 +35,8 @@ namespace Lesson2
 
             Console.WriteLine("What's the day of week? (Monday-Sunday)");
             string dayOfWeek = Console.ReadLine();
-            Day dayOfWeekEnum;
             Enum.TryParse(dayOfWeek, out dayOfWeekEnum);
 
-            int personHeightcm = 0;
             Int32.TryParse(personHeight, out personHeightcm);
 
             Kid tom = new Kid(personName, personHeightcm, 1);
@@ -51,6 +52,31 @@ namespace Lesson2
                     return false;
                 }
             }
+
+            bool IsSwanOpened(Day day)
+            {
+                if(day == Day.Tuesday || day == Day.Wednesday || day == Day.Thursday)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            bool IsPonyOpened(Day day)
+            {
+                if(day != Day.Sunday)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
                 bool IsBatman(int h)
                 {
                     if (h > 150)
