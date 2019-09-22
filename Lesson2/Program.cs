@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Lesson2
 {
@@ -18,7 +19,8 @@ namespace Lesson2
             Friday,
             Saturday,
             Sunday
-        }
+        }       
+        
         static void Main(string[] args)
         {
             Day dayOfWeekEnum;
@@ -27,8 +29,9 @@ namespace Lesson2
             Console.WriteLine("What's your name?");
             string personName = Console.ReadLine();
 
-            Console.WriteLine("What's the day of week? (Monday-Sunday)");
-            string dayOfWeek = Console.ReadLine();
+            // Console.WriteLine("What's the day of week? (Monday-Sunday)");
+            // string dayOfWeek = Console.ReadLine();
+            string dayOfWeek = ConfigurationManager.AppSettings["DayOfWeek"];
             Enum.TryParse(dayOfWeek, out dayOfWeekEnum);
 
             //switch(dayOfWeekEnum)
