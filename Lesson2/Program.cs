@@ -19,8 +19,9 @@ namespace Lesson2
             Friday,
             Saturday,
             Sunday
-        }       
-        
+        }
+
+        private static string dayOfWeek = ConfigurationManager.AppSettings["DayOfWeek"];
         static void Main(string[] args)
         {
             Day dayOfWeekEnum;
@@ -31,7 +32,7 @@ namespace Lesson2
 
             // Console.WriteLine("What's the day of week? (Monday-Sunday)");
             // string dayOfWeek = Console.ReadLine();
-            string dayOfWeek = ConfigurationManager.AppSettings["DayOfWeek"];
+            
             Enum.TryParse(dayOfWeek, out dayOfWeekEnum);
 
             //switch(dayOfWeekEnum)
@@ -137,7 +138,7 @@ namespace Lesson2
                 else if (isPonyOpened)
                 {
                     Console.WriteLine("Child {0} is permitted to attend Pony", personName);
-                    Console.ReadLine();
+                    Console.ReadKey();
                 }
             }
         }
