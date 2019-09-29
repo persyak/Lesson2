@@ -11,7 +11,8 @@ namespace Zoo
     {
         static void Main(string[] args)
         {
-
+            Manager manager = new Manager("Tom");
+            Zoo zoo = new Zoo()
         }
     }
 }

@@ -8,12 +8,15 @@ namespace Zoo
 {
     class Zoo
     {
-        internal string[] aviary;
+        internal string[] _aviary;
         internal bool IsOpened
         {
-            get { return IsOpened; }
-            set { IsOpened = true; }
+            get { return true; }
+            set { IsOpened = value; }
         }
-        private bool isopened;
+        internal Zoo(string[] aviary, bool IsOpened)
+        {
+            _aviary = aviary;
+        }
     }
 }

@@ -14,6 +14,12 @@ namespace Zoo
             _name = name;
         }
 
-        internal void AddAnimalToTheZoo ()
+        internal void AddAnimalToTheZoo()
+        {
+        }
+
+        internal void CloseTheZoo()
+        {
+        }
     }
 }
