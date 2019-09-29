@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AnimalLibrary;
 
 namespace Zoo
 {
-    class Program
+    class Manager
     {
-        static void Main(string[] args)
-        {
 
-        }
     }
 }

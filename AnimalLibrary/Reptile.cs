@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AnimalLibrary;
 
-namespace Zoo
+namespace AnimalLibrary
 {
-    class Program
+    public abstract class Reptile:Animal
     {
-        static void Main(string[] args)
-        {
-
-        }
+        public string Size;
+        public string RegiontoLive;
     }
 }

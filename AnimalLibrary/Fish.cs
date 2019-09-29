@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
-    public class Class1
+    public abstract class Fish:Animal
     {
+        public string typeOfWater;
+        public string Colour;
+        public string Food;
     }
 }
