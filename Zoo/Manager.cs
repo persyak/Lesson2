@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    class Manager
+    internal class Manager
     {
+        internal string _name;
+        internal Manager(string name)
+        {
+            _name = name;
+        }
 
+        internal void AddAnimalToTheZoo ()
     }
 }
