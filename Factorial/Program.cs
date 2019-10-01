@@ -9,24 +9,21 @@ namespace Factorial
     class Program
     {
         static void Main(string[] args)
-        {
-            
-            int myNumber;
-            int y;
+        {        
+            int y = 1;
 
             int CalculateFactorial (int i)
             {
-                return myNumber;
-                    for (int j = 1; j <= i; j++)
-                    {
-                        return j * j;
-                    }
-                
-               
+                for (int z = 1; z <= i; z++)
+                {
+                    y = y * z;
+                }
+                return y;
             }
             Console.WriteLine("Please enter a number");
-            string s = Console.ReadLine();
-            Int32.TryParse(s, out myNumber);
+            int myNumber = Convert.ToInt32(Console.ReadLine());
+            //Console.ReadLine();
+            //Int32.TryParse(s, out myNumber);
             int f = CalculateFactorial(myNumber);
             Console.WriteLine("{0} Factorial is equal {1}", myNumber, f);
             Console.ReadLine();
