@@ -8,7 +8,7 @@ namespace AnimalLibrary
 {
     public abstract class Animal
     {
-        public string type; //(predator, herbivorous)
+        public string Type; //(predator, herbivorous)
         public string Form;
 
         public abstract void Move();

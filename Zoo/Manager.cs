@@ -8,7 +8,7 @@ namespace Zoo
 {
     internal class Manager
     {
-        internal string _name;
+        private string _name;
         internal Manager(string name)
         {
             _name = name;

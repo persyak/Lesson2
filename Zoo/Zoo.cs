@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace Zoo
 {
-    class Zoo
+    internal class Zoo
     {
-        internal string[] _aviary;
-        internal bool IsOpened
+        internal string[] Aviary;
+        internal bool IsOpened { get; set; }
+        internal Zoo(string[] aviary, bool isOpened)
         {
-            get { return true; }
-            set { IsOpened = value; }
+            Aviary = aviary;
+            IsOpened = isOpened;
         }
-        internal Zoo(string[] aviary, bool IsOpened)
-        {
-            _aviary = aviary;
-        }
+
     }
 }

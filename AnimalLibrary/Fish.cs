@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
-    public abstract class Fish:Animal
+    public class Fish:Animal
     {
-        public string typeOfWater;
+        public string TypeOfWater;
         public string Colour;
         public string Food;
+
+        public override void Move()
+        {
+        }
+
+        public override void Eat()
+        {
+
+        }
     }
 }

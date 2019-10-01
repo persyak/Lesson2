@@ -10,12 +10,12 @@ namespace AnimalLibrary
     {
         public string Wishes;
 
-        public override void Eat()
+        public new void Eat()
         {
             Console.WriteLine("GoldFish eats {0}", Wishes);
         }
 
-        public override void Move()
+        public new void Move()
         {
             Console.WriteLine("Goldfish can swim and fly");
         }

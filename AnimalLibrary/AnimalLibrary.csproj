@@ -46,6 +46,7 @@
     <Compile Include="Frog.cs" />
     <Compile Include="GoldFish.cs" />
     <Compile Include="Horse.cs" />
+    <Compile Include="IPredator.cs" />
     <Compile Include="Lion.cs" />
     <Compile Include="Mammal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
