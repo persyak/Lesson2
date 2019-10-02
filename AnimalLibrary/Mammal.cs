@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
-    public abstract class Mammal:Animal
+    public class Mammal:Animal
     {
         public string TailSize;
 
-        public abstract void UseVoice();
+        public void UseVoice()
+        {
+           
+        }
     }
 }

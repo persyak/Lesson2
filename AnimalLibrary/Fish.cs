@@ -8,8 +8,6 @@ namespace AnimalLibrary
 {
     public class Fish:Animal
     {
-        public string TypeOfWater;
-        public string Colour;
         public string Food;
 
         public override void Move()
