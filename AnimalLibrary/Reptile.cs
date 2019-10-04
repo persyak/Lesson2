@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
-    public abstract class Reptile:Animal
+    public class Reptile:Animal
     {
-        public string Size;
-        public string RegiontoLive;
+        public override void Move()
+        {
+        }
+
+        public override void Eat()
+        {
+
+        }
     }
 }

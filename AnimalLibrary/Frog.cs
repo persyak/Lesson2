@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace AnimalLibrary
 {
-    class Frog:Reptile
+    public class Frog:Reptile
     {
-        public override void Eat()
-        {
-            Console.WriteLine("Frog eats insects");
-        }
+        private string _color;
 
-        public override void Move()
+        internal Frog(string color)
         {
-            Console.WriteLine("Frog can creep, jump and swim");
+            _color = color;
         }
     }
 }

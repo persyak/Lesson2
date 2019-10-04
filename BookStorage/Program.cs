@@ -11,7 +11,7 @@ namespace BookStorage
 
         static void Main(string[] args)
         {
-            var storage = new Storage();
+            var storage = new BookStorage();
             var bookmanager = new BookManager("EvBaz");
 
             storage.AddBook("Kolobok", "OMaievskiy");
@@ -20,6 +20,7 @@ namespace BookStorage
 
             void BookProcess(Book book)
             {
+                
 
             }
 

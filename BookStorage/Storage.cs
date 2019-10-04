@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookStorage
 {
-    public class Storage
+    public class BookStorage
     {
         public delegate void BookProcessing(Book book);
         public delegate void UpdateDelegate(string bookTitle);
