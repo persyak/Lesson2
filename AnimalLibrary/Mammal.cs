@@ -14,5 +14,15 @@ namespace AnimalLibrary
         {
            
         }
+
+        public override void Eat()
+        {
+            
+        }
+
+        public override void Move()
+        {
+            
+        }
     }
 }
