@@ -17,10 +17,5 @@ namespace AnimalLibrary
         {
             Console.WriteLine("Horse runs faster than Lion");
         }
-
-        //public void UseVoice()
-        //{
-        //    Console.WriteLine("Horse jerks");
-        //}
     }
 }
