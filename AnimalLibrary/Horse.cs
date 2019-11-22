@@ -17,5 +17,8 @@ namespace AnimalLibrary
         {
             Console.WriteLine("Horse runs faster than Lion");
         }
+
+        // dynamic d = 123;  dynamic type 
+
     }
 }
