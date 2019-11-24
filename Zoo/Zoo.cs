@@ -9,10 +9,10 @@ namespace Zoo
     internal class Zoo
     {
         internal string[] Aviary;
-        internal bool IsOpened { get; set; }
+        public bool IsOpened { get; set; }
         internal Zoo(string[] aviary, bool isOpened)
         {
-            Aviary = aviary;
+            Aviary = aviary; 
             IsOpened = isOpened;
         }
 
