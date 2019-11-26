@@ -11,6 +11,10 @@ namespace OM_L1_T3
         static void Main(string[] args)
         {
             TextClass myText = new TextClass();
+            Console.WriteLine("Insert a test");
+            myText._mystring1 = myText.AddStringToTheTextClass();
+            Console.WriteLine(myText._mystring1);
+            Console.ReadLine();
         }
     }
 }
