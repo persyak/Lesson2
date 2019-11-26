@@ -12,9 +12,12 @@ namespace OM_L1_T3
         {
             TextClass myText = new TextClass();
             Console.WriteLine("Insert a test");
-            myText._mystring1 = myText.AddStringToTheTextClass();
+            myText.AddStringToTheTextClass();
+            myText.AddStringToTheTextClass1("blabla");
             Console.WriteLine(myText._mystring1);
+            Console.WriteLine(myText._mystring2);
             Console.ReadLine();
+            
         }
     }
 }

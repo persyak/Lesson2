@@ -10,7 +10,7 @@ namespace OM_L1_T3
     {
         //variables are private by default
         public string _mystring1;
-        string _mystring2;
+        public string _mystring2;
         string _mystring3;
         public TextClass()
         {
@@ -18,10 +18,15 @@ namespace OM_L1_T3
             //_mystring2 = mystring2;
             //_mystring3 = mystring3;
         }
-        public string AddStringToTheTextClass()
+        public void AddStringToTheTextClass()
         {
             //Console.WriteLine("Please type any expression");
-            return _mystring1 = Console.ReadLine();
+            _mystring1 = Console.ReadLine();
+       }
+        public void AddStringToTheTextClass1(string mystring2)
+        {
+            //Console.WriteLine("Please type any expression");
+            _mystring2 = mystring2;
         }
     }
 }
