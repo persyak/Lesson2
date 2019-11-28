@@ -9,10 +9,10 @@ namespace OM_L1_T3
     class TextClass
     {
         //variables are private by default
-        public string _mystring1;
+        public string mystring1;
         public string _mystring2;
-        string _mystring3;
-        public TextClass()
+        private string _mystring3;
+        public TextClass(string mystring3)
         {
             //_mystring1 = mystring1;
             //_mystring2 = mystring2;
@@ -21,7 +21,7 @@ namespace OM_L1_T3
         public void AddStringToTheTextClass()
         {
             //Console.WriteLine("Please type any expression");
-            _mystring1 = Console.ReadLine();
+            mystring1 = Console.ReadLine();
        }
         public void AddStringToTheTextClass1(string mystring2)
         {

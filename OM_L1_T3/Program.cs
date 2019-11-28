@@ -10,11 +10,14 @@ namespace OM_L1_T3
     {
         static void Main(string[] args)
         {
-            TextClass myText = new TextClass();
+            //чому не можна використовувати "bla" як string3 після створення екземпляру класу TestClass?
+            TextClass myText = new TextClass("bla");
+
             Console.WriteLine("Insert a test");
             myText.AddStringToTheTextClass();
-            myText.AddStringToTheTextClass1("blabla");
-            Console.WriteLine(myText._mystring1);
+
+            //myText.AddStringToTheTextClass1("blabla");
+            Console.WriteLine(myText.mystring1);
             Console.WriteLine(myText._mystring2);
             Console.ReadLine();
             
