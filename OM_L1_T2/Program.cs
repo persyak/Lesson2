@@ -11,8 +11,10 @@ namespace OM_L1_T2
         static void Main(string[] args)
         {
             //створюємо масив
-            int[,] numarray = { { 1, 2, 3, 4}, {5, 6, 7, 8 }, {9, 10, 11, 12 }, {13, 14, 15, 16} };
-            
+            int[,] numarray = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+
+            //TransformArray transform = new TransformArray();
+
             //визначаємо кількість ліній
             int rows = numarray.GetUpperBound(0) + 1;
             
@@ -30,29 +32,28 @@ namespace OM_L1_T2
             }
             Console.ReadLine();
 
-            // цикл для визначення всіх елементів массиву до діагоналі і присвоєння їм нуля;
-            for(int i=0; i<rows; i++)
-            {
-                for(int j=0;j<i;j++)
-                {
-                    numarray[i, j] = 0;
-                    //Console.Write($"{numarray[i, j]} \t");
-                }
-            }
-            
-            // цикл для визначення всіх елементів массиву після діагоналі і присвоєння їм 1;
+            // transform.TransformA(numarray);
+
             for (int i = 0; i < rows; i++)
             {
-                for (int j = columns-1; j > i; j--)
+                for (int j = 0; j < columns; j++)
                 {
-                    numarray[i, j] = 1;
-                    //Console.Write($"{numarray[i, j]} \t");
+                    if (j < i)
+                    {
+                        numarray[i, j] = 0;
+                    }
+                    else if (j > i)
+                    {
+                        numarray[i, j] = 1;
+                    }
                 }
             }
 
-            // виведемо всі елементи массиву на екран зі змінами
-            for (int i = 0; i < rows; i++)
-            {
+
+                // виведемо всі елементи массиву на екран зі змінами
+                Console.WriteLine("Array has been transformed");
+                for (int i = 0; i < rows; i++)
+                {
                 for (int j = 0; j < columns; j++)
                 {
                     Console.Write($"{numarray[i, j]} \t");
