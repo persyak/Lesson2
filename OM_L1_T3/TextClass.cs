@@ -15,6 +15,7 @@ namespace OM_L1_T3
         
         public TextClass(string mystring3)
         {
+            _mystring3 = mystring3;
         }
         public void AddStringFromConsole()
         {

@@ -19,7 +19,7 @@ namespace OM_L1_T3
             //myText.AddStringToTheTextClass1("blabla");
             //Console.WriteLine(myText.mystring1);
             Console.WriteLine(myText._mystring2);
-            Console.WriteLine(myText.mystring3);
+            Console.WriteLine(myText._mystring3);
             Console.ReadLine();
             
         }

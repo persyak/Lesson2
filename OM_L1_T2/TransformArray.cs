@@ -8,15 +8,21 @@ namespace OM_L1_T2
 {
     class TransformArray
     {
-        public static int[,] numarray = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+        public static int[,] numarray = { };
+        public static int rows;
+        public static int columns;
 
-        //визначаємо кількість ліній
-        public static int rows = numarray.GetUpperBound(0) + 1;
+        public static void GetRows(int[,] numarray)
+        {
+            rows = numarray.GetUpperBound(0) + 1;
+        }
 
-        //визначаємо кількість стовпців
-        public int columns = numarray.Length / rows;
+        public static void GetColumns (int[,] numarray, int rows)
+        {
+            columns = numarray.Length / rows;
+        }
 
-        public void TransformA(int[,] a)
+        public static void TransformA(int[,] numarray)
         {
             for (int i = 0; i < rows; i++)
             {
