@@ -13,7 +13,8 @@ namespace OM_L1_T3
         private string mystring2;
         private string mystring3;
         public string stringToRemove;
-        
+        public string toRemove;
+
         public TextClass()
         {
         }
@@ -63,10 +64,22 @@ namespace OM_L1_T3
                 Console.WriteLine("row {0} has been removed", mystring3);
                 mystring3 = null;
             }
+            else if (stringToRemove == "all")
+            {
+                Console.WriteLine("your text will be removed");
+                mystring1 = null;
+                mystring2 = null;
+                mystring3 = null;
+            }
             else
             {
-                Console.WriteLine("No such row found");
+                Console.WriteLine("Nothing will be removed as specified row does not match one of possible variants");
             }
+
+        }
+        public void ReplaceString()
+        {
+
         }
 
     }

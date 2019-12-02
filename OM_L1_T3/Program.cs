@@ -8,6 +8,7 @@ namespace OM_L1_T3
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             TextClass myText = new TextClass();
@@ -27,15 +28,25 @@ namespace OM_L1_T3
             myText.ShowString3();
             Console.ReadLine();
 
-            Console.WriteLine("Please specify row to remove: first, second or third");
-            myText.stringToRemove = Console.ReadLine();
-            myText.RemoveString();
+            Console.WriteLine("Would you like to remove a row or whole test? Please enter 'yes' or 'no'");
+            myText.toRemove = Console.ReadLine();
+            if (myText.toRemove == "yes")
+            {
+                Console.WriteLine("Please specify row to remove: first, second, third or all");
+                myText.stringToRemove = Console.ReadLine();
+                myText.RemoveString();
 
-            Console.WriteLine("Your strings after remove:");
-            myText.ShowString1();
-            myText.ShowString2();
-            myText.ShowString3();
-            Console.ReadLine();
+                Console.WriteLine("Your strings after removal:");
+                myText.ShowString1();
+                myText.ShowString2();
+                myText.ShowString3();
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("please enter 'yes', if you'd like to remove a row or whole text");
+                Console.ReadLine();
+            }
         }
     }
 }
