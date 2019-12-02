@@ -21,11 +21,21 @@ namespace OM_L1_T3
             Console.WriteLine("Insert third row");
             myText.AddString3FromConsole();
 
-            Console.WriteLine(myText.mystring1);
-            Console.WriteLine(myText.mystring2);
-            Console.WriteLine(myText.mystring3);
+            Console.WriteLine("Your strings:");
+            myText.ShowString1();
+            myText.ShowString2();
+            myText.ShowString3();
             Console.ReadLine();
-            
+
+            Console.WriteLine("Please specify row to remove: first, second or third");
+            myText.stringToRemove = Console.ReadLine();
+            myText.RemoveString();
+
+            Console.WriteLine("Your strings after remove:");
+            myText.ShowString1();
+            myText.ShowString2();
+            myText.ShowString3();
+            Console.ReadLine();
         }
     }
 }
