@@ -44,9 +44,16 @@ namespace OM_L1_T3
             }
             else
             {
-                Console.WriteLine("please enter 'yes', if you'd like to remove a row or whole text");
+                Console.WriteLine("nothing will be removed");
                 Console.ReadLine();
             }
+
+            myText.ReplaceString();
+
+            Console.WriteLine(myText.Mystring1);
+            Console.WriteLine(myText.Mystring2);
+            Console.WriteLine(myText.Mystring3);
+            Console.ReadLine();
         }
     }
 }

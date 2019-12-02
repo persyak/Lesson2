@@ -14,6 +14,29 @@ namespace OM_L1_T3
         private string mystring3;
         public string stringToRemove;
         public string toRemove;
+        private string tempReplacementVariable;
+        public string TempReplacementVariable
+        {
+            get { return tempReplacementVariable; }
+            set { tempReplacementVariable = value; }
+        }
+
+        public string Mystring1
+        {
+            get { return mystring1; }
+            set { mystring1 = value; }
+        }
+
+        public string Mystring2
+        {
+            get { return mystring2; }
+            set { mystring2 = value; }
+        }
+        public string Mystring3
+        {
+            get { return mystring3; }
+            set { mystring3 = value; }
+        }
 
         public TextClass()
         {
@@ -79,7 +102,9 @@ namespace OM_L1_T3
         }
         public void ReplaceString()
         {
-
+            TempReplacementVariable = Mystring2;
+            Mystring2 = Mystring1;
+            Mystring1 = TempReplacementVariable;
         }
 
     }
