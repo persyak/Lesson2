@@ -49,10 +49,13 @@ namespace OM_L1_T3
             }
 
             myText.ReplaceString();
-
+            Console.WriteLine("Please see your rows after replacement");
             Console.WriteLine(myText.Mystring1);
             Console.WriteLine(myText.Mystring2);
             Console.WriteLine(myText.Mystring3);
+            Console.ReadLine();
+
+            myText.MyStringLength();
             Console.ReadLine();
         }
     }
