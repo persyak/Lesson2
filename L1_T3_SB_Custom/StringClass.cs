@@ -13,7 +13,19 @@ namespace L1_T3_SB_Custom
         public string MyString
         {
             get { return mystring; }
-            set { }
+            set { mystring = value; }
+        }
+
+        public bool AdditionalString(string a)
+        {
+            if (a == "yes")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
