@@ -16,6 +16,10 @@ namespace L1_T3_SB_Custom
             set { mystring = value; }
         }
 
+        public string[] strlist;
+        string[] separatingstring = { ", " };
+
+        //method to apply user's input when asking about another string Add
         public bool AdditionalString(string a)
         {
             if (a == "yes")
@@ -27,5 +31,41 @@ namespace L1_T3_SB_Custom
                 return false;
             }
         }
+
+        //Method to add a string to a text
+        public void InstertStringCycleMethod()
+        {
+            MyString = String.Concat(MyString, ", ", Console.ReadLine());
+        }
+
+        //Method to split string into substrings and show each as separate string
+        public void SeparateStringToSubstrings()
+        {
+            strlist = MyString.Split(separatingstring, StringSplitOptions.None);
+        }
+
+        //Method to remove a string
+        public void RemoveString()
+        {
+            string r = Console.ReadLine();
+            int rint;
+            Int32.TryParse(r, out rint);
+
+            List<string> list = new List<string>(strlist);
+            list.RemoveAt(rint - 1);
+            MyString = string.Join(", ", list.ToArray());
+        }
+        
+        //Method to replace string with another string in a text
+        public void ReplaceStringMethod()
+        {
+            Console.WriteLine("What element would you like to replace?");
+            string strtoreplace = Console.ReadLine();
+            Console.WriteLine("Insert a replacement element");
+            string newstr = Console.ReadLine();
+            MyString = MyString.Replace(strtoreplace, newstr);
+            Console.WriteLine("Your replaced string: {0}", MyString);
+        }
+
     }
 }

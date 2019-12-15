@@ -12,48 +12,40 @@ namespace L1_T3_SB_Custom
         {
             StringClass myStringClass = new StringClass();
             Console.WriteLine("Hey man, insert new string");
+            
+            //Add a 1st string to the text
             myStringClass.MyString = Console.ReadLine();
             Console.WriteLine(myStringClass.MyString);
-            //Console.ReadLine();
-
+            
+            //insert second string
             Console.WriteLine("Would you like to insert another string?");
             string x = Console.ReadLine();
 
-
-
+            //a cycle to insert as many strings, as user wants
             while (myStringClass.AdditionalString(x))
             {
                 Console.WriteLine("Insert another string");
-                myStringClass.MyString = String.Concat(myStringClass.MyString, ", ", Console.ReadLine());
+                myStringClass.InstertStringCycleMethod();
                 Console.WriteLine(myStringClass.MyString);
                 Console.WriteLine("Another string?");
                 x = Console.ReadLine();
             }
-            Console.WriteLine(myStringClass.MyString);
-            string[] separatingstring = {", "};
-            String[] strlist = myStringClass.MyString.Split(separatingstring, StringSplitOptions.None);
-            
-            Console.WriteLine("Now you have {0} strings in your text", strlist.Length);
-            foreach (String s in strlist)
+
+            //Call method to split string into substrings and show each as separate string
+            myStringClass.SeparateStringToSubstrings();
+            Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
+            foreach (String s in myStringClass.strlist)
             {
                 Console.WriteLine(s);
             }
+            
             Console.WriteLine("What string would you like to remove? (please insert number of the string)");
-            string r = Console.ReadLine();
-            int rint;
-            Int32.TryParse(r, out rint);
-
-            List<string> list = new List<string>(strlist);
-            list.RemoveAt(rint-1);
-            myStringClass.MyString = string.Join(", ", list.ToArray());
+            myStringClass.RemoveString();
             Console.WriteLine(myStringClass.MyString);
-            Console.WriteLine("What element would you like to replace?");
-            string strtoreplace = Console.ReadLine();
-            Console.WriteLine("Insert a replacement element");
-            string newstr = Console.ReadLine();
-            myStringClass.MyString = myStringClass.MyString.Replace(strtoreplace, newstr);
-            Console.WriteLine("Your replaced string: {0}", myStringClass.MyString);
 
+            //Call method to replace a string
+            myStringClass.ReplaceStringMethod();
+            
             Console.WriteLine("Full string length is {0} characters", myStringClass.MyString.Length);
             Console.ReadLine();
         }
