@@ -17,11 +17,37 @@ namespace L1_T3_SB_Custom
             myStringClass.InputChoice = myStringClass.InputChoice;
 
             int position = myStringClass.InputChoice.IndexOf(" ");
-            var 
+            var choiceidentifier = myStringClass.InputChoice.Substring(0, position);
 
             Console.WriteLine(myStringClass.InputChoice.Substring(0, position));
             Console.ReadLine();
+            switch (choiceidentifier)
+            {
+                case "add":
+                    Console.WriteLine("Please insert a string");
+                    myStringClass.InstertStringCycleMethod();
+                    Console.WriteLine(myStringClass.MyString);
+                    break;
 
+                case "remove":
+                    //Call method to split string into substrings and show each as separate string
+                    myStringClass.SeparateStringToSubstrings();
+                    Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
+                    foreach (String s in myStringClass.strlist)
+                    {
+                        Console.WriteLine(s);
+                    }
+
+                    Console.WriteLine("What string would you like to remove? (please insert number of the string)");
+                    myStringClass.RemoveString();
+                    Console.WriteLine(myStringClass.MyString);
+                    break;
+                case "replace":
+                    //Call method to replace a string
+                    myStringClass.ReplaceStringMethod();
+                    break;
+
+            }
             
             //Add a 1st string to the text
             myStringClass.MyString = Console.ReadLine();

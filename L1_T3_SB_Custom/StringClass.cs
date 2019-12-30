@@ -42,7 +42,14 @@ namespace L1_T3_SB_Custom
         //Method to add a string to a text
         public void InstertStringCycleMethod()
         {
-            MyString = String.Concat(MyString, ", ", Console.ReadLine());
+            if (MyString == null)
+            {
+                MyString = Console.ReadLine();
+            }
+            else
+            {
+                MyString = String.Concat(MyString, ", ", Console.ReadLine());
+            }
         }
 
         //Method to split string into substrings and show each as separate string
