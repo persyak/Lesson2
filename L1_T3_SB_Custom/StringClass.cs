@@ -9,11 +9,18 @@ namespace L1_T3_SB_Custom
     class StringClass
     {
         private string mystring;
+        private string inputchoice;
 
         public string MyString
         {
             get { return mystring; }
             set { mystring = value; }
+        }
+
+        public string InputChoice
+        {
+            get { return inputchoice; }
+            set { inputchoice = Console.ReadLine(); }
         }
 
         public string[] strlist;

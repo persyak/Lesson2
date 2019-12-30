@@ -11,7 +11,17 @@ namespace L1_T3_SB_Custom
         static void Main(string[] args)
         {
             StringClass myStringClass = new StringClass();
-            Console.WriteLine("Hey man, insert new string");
+            Console.WriteLine("Please choose action you'd like to do:\n1)add new string\n2)remove string\n" +
+                "3)replace string\n4)clear all text\n5)get longest string");
+
+            myStringClass.InputChoice = myStringClass.InputChoice;
+
+            int position = myStringClass.InputChoice.IndexOf(" ");
+            var 
+
+            Console.WriteLine(myStringClass.InputChoice.Substring(0, position));
+            Console.ReadLine();
+
             
             //Add a 1st string to the text
             myStringClass.MyString = Console.ReadLine();
