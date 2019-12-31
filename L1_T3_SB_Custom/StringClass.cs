@@ -27,9 +27,9 @@ namespace L1_T3_SB_Custom
         string[] separatingstring = { ", " };
 
         //method to apply user's input when asking about another string Add
-        public bool AdditionalString(string a)
+        public bool AdditionalAction(string a)
         {
-            if (a == "yes")
+            if (a!= "stop")
             {
                 return true;
             }
@@ -79,6 +79,13 @@ namespace L1_T3_SB_Custom
             string newstr = Console.ReadLine();
             MyString = MyString.Replace(strtoreplace, newstr);
             Console.WriteLine("Your replaced string: {0}", MyString);
+        }
+
+        public void ClearMyString()
+        {
+            MyString = null;
+            Console.WriteLine(MyString);
+            Console.WriteLine("You've cleared all text");
         }
 
     }
