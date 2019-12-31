@@ -38,22 +38,61 @@ namespace L1_T3_SB_Custom
                             break;
 
                         case "remove":
-                            //Call method to split string into substrings and show each as separate string
-                            myStringClass.SeparateStringToSubstrings();
-                            Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
-                            foreach (String s in myStringClass.strlist)
+                            try
                             {
-                                Console.WriteLine(s);
+                                //Call method to split string into substrings and show each as separate string
+                                myStringClass.SeparateStringToSubstrings();
+                                Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
+                                if (myStringClass.strlist.Length == 1)
+                                {
+                                    myStringClass.ClearMyString();
+                                }
+                                else
+                                {
+                                    foreach (String s in myStringClass.strlist)
+                                    {
+                                        Console.WriteLine(s);
+                                    }
+                                    Console.WriteLine("What string would you like to remove? (please insert number of the string)");
+                                    myStringClass.RemoveString();
+                                    Console.WriteLine(myStringClass.MyString);
+                                }
                             }
-
-                            Console.WriteLine("What string would you like to remove? (please insert number of the string)");
-                            myStringClass.RemoveString();
-                            Console.WriteLine(myStringClass.MyString);
+                            catch
+                            {
+                                Console.WriteLine("You do not have either 1 row. Insert at least 1 string at first");
+                            }
                             break;
 
                         case "replace":
-                            //Call method to replace a string
-                            myStringClass.ReplaceStringMethod();
+                            try
+                            {
+                                //Call method to split string into substrings and show each as separate string
+                                myStringClass.SeparateStringToSubstrings();
+                                if (myStringClass.strlist.Length == 1)
+                                {
+                                    string strtoreplace = myStringClass.MyString;
+                                    Console.WriteLine("---------------\nYou have only one string.\nInsert a replacement element");
+                                    string newstr = Console.ReadLine();
+                                    myStringClass.ReplaceStringMethod(strtoreplace, newstr);
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("What element would you like to replace?");
+                                    string strtoreplace = Console.ReadLine();
+
+                                    Console.WriteLine("Insert a replacement element");
+                                    string newstr = Console.ReadLine();
+
+                                    myStringClass.ReplaceStringMethod(strtoreplace, newstr);
+                                }
+                                Console.WriteLine("Your replaced string is\n{0}\n---------------", myStringClass.MyString);
+                            }
+                            catch
+                            {
+                                Console.WriteLine("You do not have either 1 row. Insert at least 1 string at first");
+                            }
                             break;
 
                         case "clear":
@@ -87,45 +126,11 @@ namespace L1_T3_SB_Custom
                 }
                 else
                 {
-                    Console.WriteLine("-------------------\nALERT!\nYou can choose only actions from the list");
+                    //Console.WriteLine("-------------------\nALERT!\nYou can choose only actions from the list");
                 }
             }
-            
-            ////Add a 1st string to the text
-            //myStringClass.MyString = Console.ReadLine();
-            //Console.WriteLine(myStringClass.MyString);
-            
-            ////insert second string
-            //Console.WriteLine("Would you like to insert another string?");
-            //string x = Console.ReadLine();
-
-            ////a cycle to insert as many strings, as user wants
-            //while (myStringClass.AdditionalString(x))
-            //{
-            //    Console.WriteLine("Insert another string");
-            //    myStringClass.InstertStringCycleMethod();
-            //    Console.WriteLine(myStringClass.MyString);
-            //    Console.WriteLine("Another string?");
-            //    x = Console.ReadLine();
-            //}
-
-            ////Call method to split string into substrings and show each as separate string
-            //myStringClass.SeparateStringToSubstrings();
-            //Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
-            //foreach (String s in myStringClass.strlist)
-            //{
-            //    Console.WriteLine(s);
-            //}
-            
-            //Console.WriteLine("What string would you like to remove? (please insert number of the string)");
-            //myStringClass.RemoveString();
-            //Console.WriteLine(myStringClass.MyString);
-
-            ////Call method to replace a string
-            //myStringClass.ReplaceStringMethod();
-            
-            //Console.WriteLine("Full string length is {0} characters", myStringClass.MyString.Length);
-            //Console.ReadLine();
+            Console.WriteLine("Application will be finished");
+            Console.ReadLine();
         }
     }
 }

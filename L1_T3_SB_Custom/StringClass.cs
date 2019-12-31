@@ -71,20 +71,15 @@ namespace L1_T3_SB_Custom
         }
         
         //Method to replace string with another string in a text
-        public void ReplaceStringMethod()
+        public string ReplaceStringMethod(string z, string w)
         {
-            Console.WriteLine("What element would you like to replace?");
-            string strtoreplace = Console.ReadLine();
-            Console.WriteLine("Insert a replacement element");
-            string newstr = Console.ReadLine();
-            MyString = MyString.Replace(strtoreplace, newstr);
-            Console.WriteLine("Your replaced string: {0}", MyString);
+            return MyString = MyString.Replace(z, w);
         }
 
         public void ClearMyString()
         {
             MyString = null;
-            Console.WriteLine(MyString);
+            //Console.WriteLine(MyString);
             Console.WriteLine("You've cleared all text");
         }
 
