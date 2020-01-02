@@ -60,7 +60,7 @@ namespace L1_T3_SB_Custom
                             }
                             catch
                             {
-                                Console.WriteLine("You do not have either 1 row. Insert at least 1 string at first");
+                                Console.WriteLine("-------------------\nALERT!\nYou do not have either 1 row. Insert at least 1 string at first");
                             }
                             break;
 
@@ -91,32 +91,67 @@ namespace L1_T3_SB_Custom
                             }
                             catch
                             {
-                                Console.WriteLine("You do not have either 1 row. Insert at least 1 string at first");
+                                Console.WriteLine("-------------------\nALERT!\nYou do not have either 1 row. Insert at least 1 string at first");
                             }
                             break;
 
                         case "clear":
-                            //Call method to clear all text
-                            myStringClass.ClearMyString();
+                            try
+                            {
+                                //Call method to split string into substrings and show each as separate string
+                                myStringClass.SeparateStringToSubstrings();
+                                //Call method to clear all text
+                                myStringClass.ClearMyString();
+                            }
+                            catch
+                            {
+                                Console.WriteLine("-------------------\nYour string is empty. You have nothing to clear\nInsert any string at first");
+                            }
                             break;
 
                         case "get":
-                            //Call method to split string to array of substrings
-                            myStringClass.SeparateStringToSubstrings();
-                            Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
-                            int maxelement = 0;
-                            string longeststring = null;
-                            foreach (String s in myStringClass.strlist)
+                           try
                             {
-                                //Console.WriteLine(s);
-                                int y = s.Length;
-                                if (y > maxelement)
+                                //Call method to split string to array of substrings
+                                myStringClass.SeparateStringToSubstrings();
+                                if (myStringClass.strlist.Length == 1)
                                 {
-                                    maxelement = y;
-                                    longeststring = s;
+                                    Console.WriteLine("You have only one string. It's length is {0}", myStringClass.MyString.Length);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Now you have {0} strings in your text", myStringClass.strlist.Length);
+                                    int maxelement = 0;
+                                    string longeststrings = null;
+                                    int count = 1;
+                                    foreach (String s in myStringClass.strlist)
+                                    {
+                                        //Console.WriteLine(s);
+                                        int y = s.Length;
+                                        if (y > maxelement)
+                                        {
+                                            maxelement = y;
+                                            longeststrings = s;
+                                        }
+                                        else if (y == maxelement)
+                                        {
+                                            longeststrings = String.Concat(longeststrings, ", ", s);
+                                            count = ++count;
+                                        }
+                                    }
+                                    Console.WriteLine("You have {0} longest string(s).They are \"{1}\". The length of each of them is {2} symbols", count, longeststrings, maxelement);
                                 }
                             }
-                            Console.WriteLine("The longest string is \"{0}\". It has {1} symbols", longeststring, maxelement);
+                            catch
+                            {
+                                Console.WriteLine("-------------------\nYour string is empty. You have nothing to calculate\nInsert any string at first");
+                            }
+                            
+                            break;
+
+                        case "stop":
+                            Console.WriteLine("Application will be finished");
+                            Console.ReadLine();
                             break;
 
                         default:
@@ -126,11 +161,11 @@ namespace L1_T3_SB_Custom
                 }
                 else
                 {
-                    //Console.WriteLine("-------------------\nALERT!\nYou can choose only actions from the list");
+                    Console.WriteLine("-------------------\nALERT!\nYou can choose only actions from the list");
                 }
             }
-            Console.WriteLine("Application will be finished");
-            Console.ReadLine();
+            //Console.WriteLine("Application will be finished");
+            //Console.ReadLine();
         }
     }
 }
