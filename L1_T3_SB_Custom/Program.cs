@@ -18,7 +18,7 @@ namespace L1_T3_SB_Custom
                     "3)replace string\n4)clear all text\n5)get longest string\n6)stop this hell");
 
                     myStringClass.InputChoice = myStringClass.InputChoice;
-
+                //Structure to allow user to choose only action from the list
                 if (myStringClass.InputChoice == "add new string" | myStringClass.InputChoice == "remove string" |
                         myStringClass.InputChoice == "replace string" | myStringClass.InputChoice == "clear all text" |
                         myStringClass.InputChoice == "get longest string" | myStringClass.InputChoice == "stop this hell")
@@ -27,14 +27,12 @@ namespace L1_T3_SB_Custom
                     int position = myStringClass.InputChoice.IndexOf(" ");
                     choiceidentifier = myStringClass.InputChoice.Substring(0, position);
 
-                    //Console.WriteLine(myStringClass.InputChoice.Substring(0, position));
-                    //Console.ReadLine();
                     switch (choiceidentifier)
                     {
                         case "add":
                             Console.WriteLine("Please insert a string");
                             myStringClass.InstertStringCycleMethod();
-                            Console.WriteLine(myStringClass.MyString);
+                            Console.WriteLine("You have next strings:{0}", myStringClass.MyString);
                             break;
 
                         case "remove":
@@ -164,8 +162,6 @@ namespace L1_T3_SB_Custom
                     Console.WriteLine("-------------------\nALERT!\nYou can choose only actions from the list");
                 }
             }
-            //Console.WriteLine("Application will be finished");
-            //Console.ReadLine();
         }
     }
 }

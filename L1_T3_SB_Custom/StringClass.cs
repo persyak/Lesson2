@@ -26,7 +26,7 @@ namespace L1_T3_SB_Custom
         public string[] strlist;
         string[] separatingstring = { ", " };
 
-        //method to apply user's input when asking about another string Add
+        //method to apply user's input when asking about user's choice
         public bool AdditionalAction(string a)
         {
             if (a!= "stop")
@@ -75,7 +75,7 @@ namespace L1_T3_SB_Custom
         {
             return MyString = MyString.Replace(z, w);
         }
-
+        //Method to clear all text or clear a string if the text contains only one string
         public void ClearMyString()
         {
             MyString = null;
